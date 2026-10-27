@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Game</title>
+</head>
+
+<body>
+    <h1>
+        <%= game.title %>
+    </h1>
+    <p>
+        <%= game.genre %>
+    </p>
+    <a href="/games/<%= game.id %>/edit" title="EDIT">EDIT</a>
+    <br>
+    <form action="/games/<%= game.id %>?_method=DELETE" method="POST">
+        <button type="submit">Delete Game</button>
+    </form>
+    <a href="/games/" title="BACK">&larr; Back to Library</a>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Game</title>
+</head>
+
+<body>
+    <h1>Edit <%= game.title %></h1>
+    <form action="/games/<%= game.id %>?_method=PATCH" method="POST">
+        <label for="idTitle">Edit Title:</label>
+        <input type="text" id="idTitle" name="title" value="<%= game.title %>" required>
+        <br>
+        <label for="idGenre">Edit Genre:</label>
+        <input type="text" id="idGenre" name="genre" value="<%= game.genre %>" required>
+        <br>
+        <button type="submit">Save Changes</button>
+    </form>
+    <a href="/games/<%= game.id %>" title="BACK">&larr; Back to Game PAGE</a>
+
+</body>
+
+</html>

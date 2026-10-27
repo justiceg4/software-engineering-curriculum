@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Library index</title>
+</head>
+
+<body>
+    <h1>Game Library</h1>
+    <ul>
+        <% for(let game of games) { %>
+            <li><a href="/games/<%= game.id %>">
+                    <%= game.title %>
+                </a>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/games/new" title="Add">Add New Game</a>
+</body>
+
+</html>
